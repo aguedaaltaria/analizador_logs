@@ -1,0 +1,13 @@
+# Ignorar archivos de logs generados
+datos/*.log
+*.log
+
+# Ignorar archivos temporales y entornos de Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Ignorar archivos del sistema operativo
+.DS_Store

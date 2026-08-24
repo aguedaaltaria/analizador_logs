@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# ./generar_logs.sh
 
 # ==========================================
 # CONFIGURACIÓN
