@@ -26,6 +26,11 @@ obtener_metodo() {
     echo "${opciones[@]}" | tr ' ' '\n' | shuf -n 1
 }
 
+# obtener_metodo() {
+#     local opciones=("GET" "GET" "GET" "POST" "PUT" "DELETE" "PATCH")
+#     echo "${opciones[@]}" | tr ' ' '\n' | shuf -n 1
+# } No es necesario pero es bueno tenerlo aqui
+
 # 3. Función para elegir una ruta web
 obtener_ruta() {
     local opciones=("/inicio" "/login" "/panel" "/api/datos" "/contacto")
