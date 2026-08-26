@@ -38,8 +38,20 @@ CONTEO_500=$(grep -c " 500 " "$ARCHIVO_LOG")
 if [ "$CONTEO_500" -gt 0 ]; then
     echo "¡Atención! Se detectaron $CONTEO_500 errores 500 en las siguientes rutas:"
     grep " 500 " "$ARCHIVO_LOG" | awk '{print "   - IP:", $1, "falló en la ruta:", $7}'
+    echo "------------------------------------------------------"
 else
     echo "No se registraron errores críticos 500."
+    echo "------------------------------------------------------"
+fi
+
+echo "6. Desglose global de incidentes (4xx y 5xx):"
+TOTAL_ERRORES=$(grep -c -E " (400|403|404|500) " "$ARCHIVO_LOG")
+
+if [ "$TOTAL_ERRORES" -gt 0 ]; then
+    echo "Total de incidencias detectadas: $TOTAL_ERRORES"
+    grep -E " (400|403|404|500) " "$ARCHIVO_LOG" | awk '{print "   - IP:", $1, "| Código:", $9, "| Ruta:", $7}'
+else
+    echo "No se detectaron errores 4xx ni 5xx en el archivo."
 fi
 
 echo "======================================================"
