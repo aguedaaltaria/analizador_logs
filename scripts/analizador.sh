@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 
-if [ "$1" == "real" ]; then
-    ARCHIVO_LOG="../datos/servidor_acceso_real.log"
-else
-    ARCHIVO_LOG="../datos/servidor_acceso.log"
-fi
+# ==============================================================================
+# SCRIPT DEL DÍA 2: ANALIZADOR DE LOGS WEB
+# ==============================================================================
+
+# --- CÓDIGO ANTERIOR: Bifurcación manual por palabra clave ---
+# if [ "$1" == "real" ]; then
+#     ARCHIVO_LOG="../datos/servidor_acceso_real.log"
+# else
+#     ARCHIVO_LOG="../datos/servidor_acceso.log"
+# fi
+
+ARCHIVO_LOG="${1:-../datos/servidor_acceso.log}"
 
 if [ ! -f "$ARCHIVO_LOG" ]; then
     echo "Error: No se encontró el archivo de log en $ARCHIVO_LOG"
