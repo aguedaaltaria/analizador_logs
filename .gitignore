@@ -2,9 +2,13 @@
 datos/*.log
 *.log
 
-# Ignorar bases de datos SQLite locales (archivos binarios generados dinámicamente)
+# Ignorar bases de datos SQLite locales
 *.db
 datos/*.db
+
+# Ignorar gráficos e imágenes generadas
+datos/graficos/
+*.png
 
 # Ignorar archivos temporales y entornos de Python
 __pycache__/
