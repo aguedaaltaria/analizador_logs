@@ -2,6 +2,10 @@
 datos/*.log
 *.log
 
+# Ignorar bases de datos SQLite locales (archivos binarios generados dinámicamente)
+*.db
+datos/*.db
+
 # Ignorar archivos temporales y entornos de Python
 __pycache__/
 *.pyc
