@@ -29,9 +29,10 @@ uv run python3 procesar_logs_reales.py
 echo "[3/4] Generando reportes analíticos consolidados..."
 uv run python3 reportes.py
 
-# [FASE 4: PRESENTACIÓN] Renderizado del dashboard visual en imágenes PNG de alta resolución
-echo "[4/4] Renderizando dashboard de visualizaciones gráficas..."
+# [FASE 4: PRESENTACIÓN] Renderizado de dashboards gráficos y reporte Markdown dinámico
+echo "[4/4] Renderizando dashboard de visualizaciones y reporte Markdown..."
 uv run python3 visualizador.py
+uv run python3 generar_reporte_md.py
 
 echo "======================================================"
 echo "    PIPELINE COMPLETADO CON ÉXITO                     "
