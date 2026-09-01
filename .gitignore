@@ -18,4 +18,5 @@ venv/
 .env
 
 # Ignorar archivos del sistema operativo
-.DS_Store
+.DS_Storeautomatizacion_cron.md
+automatizacion_cron.md
